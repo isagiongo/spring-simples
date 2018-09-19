@@ -12,16 +12,16 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @SpringBootApplication
-public class DemoApplication {
+public class TesteAplicacao {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(TesteAplicacao.class, args);
 	}
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String index(Model model) {
 		Boolean validation = false;
-		List<String> lista = Arrays.asList("Marina Silva", "Isa Giongo", "Maria Antonieta", "Manuela Dávila");
+		List<String> lista = Arrays.asList("Mariana Silva", "Isa Giongo", "Maria Antonieta", "Manuela Dávila");
 		model.addAttribute("validation", false);
 		model.addAttribute("list", lista);
 		
